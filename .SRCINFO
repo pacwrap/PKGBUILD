@@ -1,7 +1,7 @@
 pkgbase = pacwrap
 	pkgdesc = Facilitates the creation, management, and execution of unprivileged Arch-based bubblewrap containers.
 	pkgver = 0.8.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://pacwrap.sapphirus.org/
 	arch = x86_64
 	license = GPLv3-only
@@ -21,7 +21,7 @@ pkgname = pacwrap
 	depends = bash
 	depends = bubblewrap
 	depends = gnupg
-	depends = libalpm.so>=14
+	depends = libalpm.so=15
 	depends = libseccomp
 	depends = pacman
 	depends = pacwrap-dist=0.8.5

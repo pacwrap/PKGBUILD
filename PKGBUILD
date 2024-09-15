@@ -3,7 +3,7 @@
 _pkgname=pacwrap
 pkgname=('pacwrap' 'pacwrap-dist')
 pkgver=0.8.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Facilitates the creation, management, and execution of unprivileged Arch-based bubblewrap containers."
 arch=('x86_64')
 url="https://pacwrap.sapphirus.org/"
@@ -29,7 +29,7 @@ build() {
 package_pacwrap() {
     provides=("${_pkgname}")
     conflicts=("${_pkgname}")
-    depends=('bash' 'bubblewrap' 'gnupg' 'libalpm.so>=14' 'libseccomp' 'pacman' "pacwrap-dist=$pkgver" 'zstd')
+    depends=('bash' 'bubblewrap' 'gnupg' 'libalpm.so=15' 'libseccomp' 'pacman' "pacwrap-dist=$pkgver" 'zstd')
     optdepends=('xdg-dbus-proxy')
 
     cd "${_pkgname}"
