@@ -8,7 +8,7 @@ pkgdesc="Facilitates the creation, management, and execution of unprivileged Arc
 arch=('x86_64')
 url="https://pacwrap.sapphirus.org/"
 license=('GPLv3-only')
-makedepends=('cargo' 'busybox' 'fakechroot' 'fakeroot' 'git' 'libalpm.so>=14' 'pacman' 'zstd')
+makedepends=('cargo' 'busybox' 'fakechroot' 'fakeroot' 'git' 'libalpm.so=15' 'pacman' 'zstd')
 source=("$_pkgname::git+https://github.com/pacwrap/pacwrap.git#tag=${pkgver}")
 md5sums=('SKIP')
 options=('!lto')
@@ -27,8 +27,6 @@ build() {
 }
 
 package_pacwrap() {
-    provides=("${_pkgname}")
-    conflicts=("${_pkgname}")
     depends=('bash' 'bubblewrap' 'gnupg' 'libalpm.so=15' 'libseccomp' 'pacman' "pacwrap-dist=$pkgver" 'zstd')
     optdepends=('xdg-dbus-proxy')
 
@@ -43,9 +41,6 @@ package_pacwrap() {
 }
 
 package_pacwrap-dist() {
-    provides=("${_pkgname}-dist")
-    conflicts=("${_pkgname}-dist")
-
     cd "${_pkgname}"
 
     install -dD 755 "${pkgdir}/usr/share/${_pkgname}/"

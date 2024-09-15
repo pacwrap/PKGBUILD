@@ -10,7 +10,7 @@ pkgbase = pacwrap
 	makedepends = fakechroot
 	makedepends = fakeroot
 	makedepends = git
-	makedepends = libalpm.so>=14
+	makedepends = libalpm.so=15
 	makedepends = pacman
 	makedepends = zstd
 	options = !lto
@@ -27,9 +27,5 @@ pkgname = pacwrap
 	depends = pacwrap-dist=0.8.5
 	depends = zstd
 	optdepends = xdg-dbus-proxy
-	provides = pacwrap
-	conflicts = pacwrap
 
 pkgname = pacwrap-dist
-	provides = pacwrap-dist
-	conflicts = pacwrap-dist
