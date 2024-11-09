@@ -2,7 +2,7 @@
 
 _pkgname=pacwrap
 pkgname=('pacwrap' 'pacwrap-dist')
-pkgver=0.8.6
+pkgver=0.8.7
 pkgrel=1
 pkgdesc="A package manager which facilitates Arch-based bubblewrap containers."
 arch=('x86_64')
